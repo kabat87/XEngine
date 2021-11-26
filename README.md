@@ -1,2 +1,2 @@
 # XEngine
-XEngine, a engine fueled by pAI
+XEngine, a engine fueled by ChirusAI
