@@ -42,6 +42,8 @@ do_cleanup(){
   rm -rf "$MODPATH/README.md" 2>/dev/null
   rm -rf "$MODPATH/xengine.png" 2>/dev/null
   rm -rf "$MODPATH/XToast.apk" 2>/dev/null
+  rm -rf "$MODPATH/xengine64.tar.xz"
+  rm -rf "$MODPATH/xengine32.tar.xz"
 }
 
 ############
@@ -76,13 +78,11 @@ info_print(){
 int_main(){
   ui_print "[*] Injecting engine into system... "
   ui_print ""
-#  if [[ "$IS64BIT" == "true" ]]; then
-#    rm -f "$MODPATH/system/bin/bash32"
-#    mv -f "$MODPATH/system/bin/bash64" "$MODPATH/system/bin/bash"
-#  else
-#    rm -f "$MODPATH/system/bin/bash64"
-#    mv -f "$MODPATH/system/bin/bash32" "$MODPATH/system/bin/bash"
-#  fi 
+  if [[ "$IS64BIT" == "true" ]]; then
+    tar -xf "$MODPATH/xengine64.tar.xz" -C "$MODPATH"
+  else
+    tar -xf "$MODPATH/xengine32.tar.xz" -C "$MODPATH"
+  fi 
   pm install "$MODPATH/XToast.apk"
   sleep 1.5
   ui_print "[*] Setting up executable permissions... "

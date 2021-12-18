@@ -25,6 +25,6 @@ wait_until_login
 sleep 60
 
 # Initialize engine
-"${modpath}engine/xengine" 2>/dev/null
-("${modpath}engine/xengine1" &)& 2>/dev/null
+"${modpath}engine/xengine1" 2>/dev/null
 ("${modpath}engine/xengine2" &)& 2>/dev/null
+("${modpath}engine/xengine3" &)& 2>/dev/null
