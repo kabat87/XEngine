@@ -1,9 +1,9 @@
 id=xengine
 name=XEngine
-version=v0.1
-versionCode=10
+version=v0.2
+versionCode=23
 author=@iamlooper
 description=Energy-Aware Android Optimization AI Engine.
 codeName=SANDSTORM
-status=beta
-beta_status=ss2
+status=beta-ss3
+is_beta=true
