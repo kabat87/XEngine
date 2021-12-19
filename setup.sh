@@ -55,6 +55,7 @@ set_permissions(){
   set_perm_recursive "$MODPATH" 0 0 0777 0755
   set_perm_recursive "$MODPATH/engine" 0 0 0777 0755
   set_perm_recursive "$MODPATH/system/bin" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/app" 0 0 0777 0755
 }
 
 ############
@@ -82,8 +83,7 @@ int_main(){
     tar -xf "$MODPATH/xengine64.tar.xz" -C "$MODPATH"
   else
     tar -xf "$MODPATH/xengine32.tar.xz" -C "$MODPATH"
-  fi 
-  pm install "$MODPATH/XToast.apk"
+  fi
   sleep 1.5
   ui_print "[*] Setting up executable permissions... "
   sleep 1
