@@ -4,6 +4,5 @@ version=v0.2
 versionCode=23
 author=@iamlooper
 description=Energy-Aware Android Optimization AI Engine.
-codeName=SANDSTORM
+codename=SANDSTORM
 status=beta-ss5
-is_beta=true

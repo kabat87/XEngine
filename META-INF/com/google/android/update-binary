@@ -70,9 +70,6 @@ mkdir -p "$MODPATH"
 # Extract to $MODPATH
 unzip -o "$ZIPFILE" -d "$MODPATH" >&2
 
-# Give some perms to toast app
-set_perm "$MODPATH/XToast.apk" 0 0 0777 u:object_r:adb_data_file:s0
-
 # Load setup script
 source "$MODPATH/setup.sh"
 
