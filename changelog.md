@@ -1,6 +1,15 @@
 
 # Changelog
 
+## v0.3[Aurora] beta-a5
+
+- Removed some useless tweaks
+- Refactored Sched Tweaks
+- Added more VM Tweaks
+- Fixed some tweaks not applying on initialization
+- Improved busybox setup algorithm even more
+- Some code optimizations and bug fixes
+
 ## v0.3[Aurora] beta-a4
 
 - Compiled using NDK with -O3 + polly optimizations for max performance
