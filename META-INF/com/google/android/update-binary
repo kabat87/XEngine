@@ -112,6 +112,12 @@ set_permissions
 # Do cleanup
 do_cleanup
 
+# Do cleanup 2
+[[ "$(grep_prop "status" "$MODPATH/module.prop")" == "beta-a6" ]] && {
+  rmtouch "$NVBASE/modules/xengine/engine/pai/custom_gamelist.ai"
+  rmtouch "$NVBASE/modules/xengine/engine/pai/adjshield_cfg.txt"
+}
+
 # Handle replace folders
 for TARGET in $REPLACE; do
   ui_print "[*] Replace target: $TARGET"
