@@ -1,6 +1,17 @@
 
 # Changelog
 
+## v0.3[Aurora] beta-a6
+
+- Disabled doze optimization by default
+- Try to fix google play store + some google apps issue
+- Refactored CPU Tweaks
+- Added more Surfaceflinger Tweaks
+- Added Doze Whitelist option in XMenu™ (For more info see in help option of XMenu™)
+- Added Custom Applist option in XMenu™ (For more info see in help option of XMenu™)
+- Added Change Renderer option in XMenu™ (For more info see in help option of XMenu™)
+- Misc. code optimizations and bug fixes
+
 ## v0.3[Aurora] beta-a5
 
 - Removed some useless tweaks
