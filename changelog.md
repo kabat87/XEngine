@@ -1,6 +1,15 @@
 
 # Changelog
 
+## v0.3[Aurora] beta-a7
+
+- Try to fix some lags by tuning CPU and GPU Tweaks
+- Improved CGroup Tweaks
+- New pAI ability, now it will enable system powersaver if your battery is low
+- New pAI ability, now it will enable force doze when your device sleeps
+- Tuned some misc. tweaks 
+- Some bug fixes
+
 ## v0.3[Aurora] beta-a6
 
 - Disabled doze optimization by default
