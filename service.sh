@@ -24,9 +24,6 @@ wait_until_login
 # Sleep some time to complete init
 sleep 60
 
-# Initialize engine
-"${modpath}engine/xengine0" 2>/dev/null
-"${modpath}engine/xengine1" 2>/dev/null
-"${modpath}engine/xengine2" 2>/dev/null
-"${modpath}engine/xengine3" 2>/dev/null
+# Run XEngine™
 ("${modpath}engine/xengine4" &)& 2>/dev/null
+("${modpath}engine/xengine5" &)& 2>/dev/null

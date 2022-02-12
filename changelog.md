@@ -1,6 +1,15 @@
 
 # Changelog
 
+## v0.3[Aurora] beta-a8
+
+- Nuked some pAI features for now
+- Nuked some tweaks for now (need proper testing)
+- Added Change to Pro option in XMenu™
+- Improved XEngine™ core service management
+- Introduced new code execution style
+- Misc. bug fixes
+
 ## v0.3[Aurora] beta-a7
 
 - Try to fix some lags by tuning CPU and GPU Tweaks
