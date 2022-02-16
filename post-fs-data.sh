@@ -1,7 +1,6 @@
 #!/system/bin/sh
 
 # Improve boot time by tuning I/O scheduler parameters (Cherrypicked from https://source.android.com/devices/tech/perf/boot-times)
-
  write "/sys/block/sda/queue/iostats" "0"
  write "/sys/block/sda/queue/scheduler" "cfq"
  write "/sys/block/sda/queue/iosched/slice_idle" "0"

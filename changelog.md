@@ -1,6 +1,16 @@
 
 # Changelog
 
+## v0.3[Aurora] beta-a9
+
+- Refactored Sched Tweaks
+- Improved CPU Tweaks for Powersaver and Balanced Modes
+- Added Misc. GPU Tunables
+- Disabled more useless services (MIUI 💩)
+- Nuked some internal busybox bugs
+- Completely fixed multiple refresh rate problem in all devices
+- Adapted more code to new code execution style
+
 ## v0.3[Aurora] beta-a8
 
 - Nuked some pAI features for now
