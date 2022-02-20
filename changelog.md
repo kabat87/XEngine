@@ -7,7 +7,7 @@
 - Try to fix little cluster cores issues
 - Fixed some bugs in GPU Tweaks
 - Increased battery efficiency by nuking useless tweaks
-- Added modified qcom perfconfigs
+- Added modified qcom and mtk perfconfigs
 - Improvements in system processes priority optimization
 - Improved renderer changing logic in XMenu
 
