@@ -39,7 +39,7 @@ REPLACE="
 ############
 
 # Remove unnecessary stuff
-do_cleanup(){
+do_cleanup() {
   rmtouch "$MODPATH/README.md" 
   rmtouch "$MODPATH/xengine.png"
   rmtouch "$MODPATH/XToast.apk"
@@ -53,11 +53,14 @@ do_cleanup(){
 ############
 
 # Set permissions
-set_permissions(){
+set_permissions() {
   set_perm_recursive "$MODPATH" 0 0 0777 0755
   set_perm_recursive "$MODPATH/engine" 0 0 0777 0755
   set_perm_recursive "$MODPATH/system/bin" 0 0 0777 0755
   set_perm_recursive "$MODPATH/system/app" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/vendor/etc" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/vendor/etc" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/system/vendor/etc/perf" 0 0 0777 0755
 }
 
 ############
@@ -65,7 +68,7 @@ set_permissions(){
 ############
 
 # Set what you want to be displayed on header of installation process
-info_print(){
+info_print() {
   awk '{print}' "$MODPATH/xengine_banner"
   ui_print ""
   sleep 0.5
@@ -79,7 +82,7 @@ info_print(){
 ############
 
 # Change the logic to whatever you want
-int_main(){
+int_main() {
   ui_print "[*] Injecting engine into system..."
   ui_print ""
   [[ "$IS64BIT" == "true" ]] && tar -xf "$MODPATH/xengine64.tar.xz" -C "$MODPATH" || tar -xf "$MODPATH/xengine32.tar.xz" -C "$MODPATH"

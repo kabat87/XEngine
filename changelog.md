@@ -1,6 +1,16 @@
 
 # Changelog
 
+## v0.3[Aurora] 
+
+- Many improvement in various tweaks and core services
+- Try to fix little cluster cores issues
+- Fixed some bugs in GPU Tweaks
+- Increased battery efficiency by nuking useless tweaks
+- Added modified qcom perfconfigs
+- Improvements in system processes priority optimization
+- Improved renderer changing logic in XMenu
+
 ## v0.3[Aurora] beta-a9
 
 - Refactored Sched Tweaks
