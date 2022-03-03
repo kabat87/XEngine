@@ -1,8 +1,8 @@
 id=xengine
 name=XEngine
-version=v0.3
-versionCode=37
+version=v0.4
+versionCode=49
 author=@iamloooper
-description=Energy-Aware Android Optimization AI Engine.
-codename=AURORA
-status=Stable
+description=Energy-Aware Android Optimization AI Engine
+codename=Cherrystone
+status=beta-cs1

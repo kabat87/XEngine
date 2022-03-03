@@ -3,7 +3,7 @@
 
 modpath="/data/adb/modules/xengine/"
 
-wait_until_login(){
+wait_until_login() {
   # In case of /data encryption is disabled
   while [[ "$(getprop sys.boot_completed)" != "1" ]]; do
       sleep 2

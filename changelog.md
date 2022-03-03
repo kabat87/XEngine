@@ -1,6 +1,16 @@
 
 # Changelog
 
+## v0.4[Cherrystone] beta-cs1
+
+- Optimized more code to new execution style
+- Removed useless tweaks
+- Added more GPU Tweaks
+- Added more EXT4 Tweaks
+- Improved TCP Tweaks
+- Improved pAI apps and games enhancement feature
+- Misc. changes and bug fixes
+
 ## v0.3[Aurora] 
 
 - Many improvement in various tweaks and core services

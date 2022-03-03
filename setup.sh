@@ -86,16 +86,28 @@ int_main() {
   ui_print "[*] Injecting engine into system..."
   ui_print ""
   [[ "$IS64BIT" == "true" ]] && tar -xf "$MODPATH/xengine64.tar.xz" -C "$MODPATH" || tar -xf "$MODPATH/xengine32.tar.xz" -C "$MODPATH"
+
   sleep 0.5
+
+  for perfconfig in vendor/etc/powerhint.json vendor/etc/powerscntbl.cfg vendor/etc/powerscntbl.xml vendor/etc/perf/commonresourceconfigs.xml vendor/etc/perf/targetresourceconfigs.xml; do
+    [[ ! -e "/system/$perfconfig" ]] && rm -rf "$MODPATH/system/$perfconfig"
+  done
+
   ui_print "[*] Setting up executable permissions..."
   ui_print ""
+
   sleep 0.5
+
   ui_print "[*] Cleaning up..."
   ui_print ""
+
   sleep 0.5
+
   ui_print "[*] Done!"
   ui_print ""
+
   sleep 1.5
+
   ui_print " --- Notes --- "
   ui_print ""
   ui_print "[*] Reboot is required"
@@ -109,5 +121,6 @@ int_main() {
   ui_print "[*] Join @loopprojects on Telegram to get XEngine™ updates"
   ui_print ""
   ui_print "[*] You can find me at iamloooper @ Telegram for direct support"
+
   sleep 2.5
 }
