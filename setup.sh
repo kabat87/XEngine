@@ -71,9 +71,12 @@ set_permissions() {
 info_print() {
   awk '{print}' "$MODPATH/xengine_banner"
   ui_print ""
+
   sleep 0.5
+
   ui_print "[⚡] ENERGY-AWARE ANDROID OPTIMIZATION AI ENGINE [⚡]"
   ui_print ""
+
   sleep 0.5
 }
 
@@ -85,6 +88,7 @@ info_print() {
 int_main() {
   ui_print "[*] Injecting engine into system..."
   ui_print ""
+
   [[ "$IS64BIT" == "true" ]] && tar -xf "$MODPATH/xengine64.tar.xz" -C "$MODPATH" || tar -xf "$MODPATH/xengine32.tar.xz" -C "$MODPATH"
 
   sleep 0.5
@@ -92,6 +96,8 @@ int_main() {
   for perfconfig in vendor/etc/powerhint.json vendor/etc/powerscntbl.cfg vendor/etc/powerscntbl.xml vendor/etc/perf/commonresourceconfigs.xml vendor/etc/perf/targetresourceconfigs.xml; do
     [[ ! -e "/system/$perfconfig" ]] && rm -rf "$MODPATH/system/$perfconfig"
   done
+
+  sleep 0.5
 
   ui_print "[*] Setting up executable permissions..."
   ui_print ""
