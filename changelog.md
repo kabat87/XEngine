@@ -1,6 +1,18 @@
 
 # Changelog
 
+## v0.4[Cherrystone] beta-cs2
+
+- Major changes and improvements
+- Added XLoad Tweaks
+- Added zygote preforking in XMenu
+- Added system props tweaks
+- Removed useless tweaks
+- Refactored various tweaks
+- Updated SQLite binary
+- Fixed some bugs
+- Misc. changes
+
 ## v0.4[Cherrystone] beta-cs1
 
 - Optimized more code to new execution style
