@@ -1,12 +1,10 @@
 #!/system/bin/sh
 # XEngine™ | Service Script
 
-modpath="/data/adb/modules/xengine/"
-
-wait_until_login(){
+wait_until_login() {
   # In case of /data encryption is disabled
   while [[ "$(getprop sys.boot_completed)" != "1" ]]; do
-      sleep 2
+    sleep 2
   done
 
   # We don't have the permission to rw "/storage/emulated/0" before the user unlocks the screen
@@ -22,8 +20,7 @@ wait_until_login(){
 wait_until_login
 
 # Sleep some time to complete init
-sleep 60
+sleep 30
 
-# Initialize engine
-"${modpath}engine/xengine1" 2>/dev/null
-("${modpath}engine/xengine2" &)& 2>/dev/null
+# Initialize XEngine™
+xengine --init

@@ -1,7 +1,11 @@
+![XEngine](https://github.com/iamlooper/XEngine/raw/main/xengine.jpg)
+
 # XEngine
+
 XEngine, a engine fueled by Chirus pAI. 
 
 ## Introduction
+
 **XEngine™** is a energy-aware android optimization AI engine. It tweaks various kernel parameters and controls performance upscaling functions with the help of built-in AI engine. Thus, recognizes various app usage scenarios and try to apply proper tweak for the running scenario.
 
 ## Modes
@@ -18,25 +22,9 @@ Balances performance and battery saving features by adjusting kernel parameters 
 
 Maximizes CPU and GPU clock speeds and disables thermal throttling with tuning kernel parameters to provide true gaming/performance experience.
 
-## XMenu™
+## XMenu
 
 **XMenu™**, a XEngine™ modes changer with miscellaneous functions. By using it, you can change the current mode of XEngine™ and can apply few other tweaks which are also necessary to optimize device. To open XMenu™ in terminal, execute `su -c xmenu` in terminal (Termux is recommended). To know more about the miscellaneous functions, their is a help option in XMenu™ by which you can know what those functions actually do.
-
-## Alternative Commands
-
-If you want to save your time, by simply executing a single command in terminal. Their are some commands for it.
-
-### Modes Changer
-
-To directly change XEngine™ mode from terminal, execute `su -c "xengine -m <mode>"`
-
-### Thermal State Changer
-
-To directly change mode from terminal, execute `su -c "xengine -t <state>"`
-
-### Help Dialog
-
-To get complete information about the above commands, execute `su -c "xengine -h"`
 
 ## FAQ (Frequently Asked Questions)
 
@@ -67,3 +55,8 @@ Thanks to [tytydraco](https://github.com/tytydraco)
 Thanks to [Pedro](https://github.com/pedrozzz0)
 
 Thanks to [Paget96](https://github.com/Paget96)
+
+
+# Download
+
+Go to [here](https://www.pling.com/p/1704617/) to download XEngine™ builds
