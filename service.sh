@@ -4,7 +4,7 @@
 wait_until_login() {
   # In case of /data encryption is disabled
   while [[ "$(getprop sys.boot_completed)" != "1" ]]; do
-    sleep 2
+    sleep 3
   done
 
   # We don't have the permission to rw "/storage/emulated/0" before the user unlocks the screen
@@ -19,8 +19,8 @@ wait_until_login() {
 
 wait_until_login
 
-# Sleep some time to complete init
+# Sleep some time to make sure init is completed
 sleep 30
 
-# Initialize XEngine™
-xengine --init
+# Execute XEngine™
+xengine --execute

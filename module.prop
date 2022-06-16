@@ -1,8 +1,7 @@
 id=xengine
 name=XEngine
 version=v0.4
-versionCode=49
-author=@iamloooper
+author=iamlooper @ telegram
 description=Energy-Aware Android Optimization AI Engine
 codename=Cherrystone
-status=beta-cs2
+status=Stable

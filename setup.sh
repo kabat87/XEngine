@@ -8,15 +8,14 @@
 # Config Vars
 ############
 
-# Uncomment if you want to skip mount for your module
-#SKIPMOUNT=true
-# Uncomment if you want to clean old files in module before injecting new module
-#CLEANSERVICE=true
-# Uncomment if you want to load vskel after module info print. If you want to manually load it, consider using load_vksel function
-#AUTOVKSEL=true
-# Uncomment DEBUG if you want store debug logs of installation
-DEBUG=true
-
+# Set this to true if you want to skip mount for your module
+SKIPMOUNT="false"
+# Set this to true if you want to clean old files in module before injecting new module
+CLEANSERVICE="false"
+# Set this to true if you want to load vskel after module info print. If you want to manually load it, consider using load_vksel function
+AUTOVKSEL="false"
+# Set this to true if you want store debug logs of installation
+DEBUG="true"
 
 ############
 # Replace List
@@ -35,20 +34,6 @@ REPLACE="
 "
 
 ############
-# Cleanup
-############
-
-# Remove unnecessary stuff
-do_cleanup() {
-  rmtouch "$MODPATH/README.md" 
-  rmtouch "$MODPATH/xengine.png"
-  rmtouch "$MODPATH/XToast.apk"
-  rmtouch "$MODPATH/xengine64.tar.xz"
-  rmtouch "$MODPATH/xengine32.tar.xz"
-  rmtouch "$NVBASE/modules/xengine/engine/busybox"
-}
-
-############
 # Permissions
 ############
 
@@ -56,10 +41,9 @@ do_cleanup() {
 set_permissions() {
   set_perm_recursive "$MODPATH" 0 0 0777 0755
   set_perm_recursive "$MODPATH/engine" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/bin" 0 0 0777 0755
+  set_perm_recursive "$MODPATH/bin/busybox" 0 0 0777 0755
   set_perm_recursive "$MODPATH/system/bin" 0 0 0777 0755
-  set_perm_recursive "$MODPATH/system/vendor/etc" 0 0 0777 0755
-  set_perm_recursive "$MODPATH/system/vendor/etc" 0 0 0777 0755
-  set_perm_recursive "$MODPATH/system/vendor/etc/perf" 0 0 0777 0755
 }
 
 ############
@@ -84,17 +68,11 @@ info_print() {
 ############
 
 # Change the logic to whatever you want
-int_main() {
+init_main() {
   ui_print "[*] Injecting engine into system..."
   ui_print ""
 
   [[ "$IS64BIT" == "true" ]] && tar -xf "$MODPATH/xengine64.tar.xz" -C "$MODPATH" || tar -xf "$MODPATH/xengine32.tar.xz" -C "$MODPATH"
-
-  sleep 0.5
-
-  for perfconfig in vendor/etc/powerhint.json vendor/etc/powerscntbl.cfg vendor/etc/powerscntbl.xml vendor/etc/perf/commonresourceconfigs.xml vendor/etc/perf/targetresourceconfigs.xml; do
-    [[ ! -e "/system/$perfconfig" ]] && rm -rf "$MODPATH/system/$perfconfig"
-  done
 
   sleep 0.5
 
@@ -125,7 +103,7 @@ int_main() {
   ui_print ""
   ui_print "[*] Join @loopprojects on Telegram to get XEngine™ updates"
   ui_print ""
-  ui_print "[*] You can find me at iamloooper @ Telegram for direct support"
+  ui_print "[*] You can find me at iamlooper @ Telegram for direct support"
 
   sleep 2.5
 }

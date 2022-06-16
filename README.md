@@ -1,4 +1,4 @@
-![XEngine](https://github.com/iamlooper/XEngine/raw/main/xengine.jpg)
+![XEngine](https://github.com/iamlooper/XEngine/raw/main/xengine.png)
 
 # XEngine
 
@@ -55,7 +55,6 @@ Thanks to [tytydraco](https://github.com/tytydraco)
 Thanks to [Pedro](https://github.com/pedrozzz0)
 
 Thanks to [Paget96](https://github.com/Paget96)
-
 
 # Download
 
