@@ -40,9 +40,7 @@ REPLACE="
 # Set permissions
 set_permissions() {
   set_perm_recursive "$MODPATH" 0 0 0777 0755
-  set_perm_recursive "$MODPATH/engine" 0 0 0777 0755
   set_perm_recursive "$MODPATH/bin" 0 0 0777 0755
-  set_perm_recursive "$MODPATH/bin/busybox" 0 0 0777 0755
   set_perm_recursive "$MODPATH/system/bin" 0 0 0777 0755
 }
 
@@ -57,7 +55,7 @@ info_print() {
 
   sleep 0.5
 
-  ui_print "[⚡] ENERGY-AWARE ANDROID OPTIMIZATION AI ENGINE [⚡]"
+  ui_print "⚡ Energy Aware Android Optimization AI Engine ⚡"
   ui_print ""
 
   sleep 0.5
@@ -72,7 +70,15 @@ init_main() {
   ui_print "[*] Injecting engine into system..."
   ui_print ""
 
-  [[ "$IS64BIT" == "true" ]] && tar -xf "$MODPATH/xengine64.tar.xz" -C "$MODPATH" || tar -xf "$MODPATH/xengine32.tar.xz" -C "$MODPATH"
+  [[ "$IS64BIT" == "true" ]] && {
+    mv -f "$MODPATH/bin/vmtouch64" "$MODPATH/bin/vmtouch"
+    mv -f "$MODPATH/bin/xengine_main64" "$MODPATH/bin/xengine_main"
+    mv -f "$MODPATH/system/bin/xengine64" "$MODPATH/system/bin/xengine"    
+  } || {
+    mv -f "$MODPATH/bin/vmtouch32" "$MODPATH/bin/vmtouch"
+    mv -f "$MODPATH/bin/xengine_main32" "$MODPATH/bin/xengine_main"
+    mv -f "$MODPATH/system/bin/xengine32" "$MODPATH/system/bin/xengine"    
+  }
 
   sleep 0.5
 
@@ -97,7 +103,7 @@ init_main() {
   ui_print ""
   ui_print "[*] Do not use XEngine™ with other optimizer modules"
   ui_print ""
-  ui_print "[*] (su -c xmenu) to open XMenu™ in Terminal"
+  ui_print "[*] (su -c xengine --menu) to open XMenu™ in Terminal"
   ui_print ""
   ui_print "[*] Report issues to @loopchats on Telegram"
   ui_print ""

@@ -1,4 +1,4 @@
-![XEngine](https://github.com/iamlooper/XEngine/raw/main/xengine.png)
+![XEngine](https://github.com/iamlooper/XEngine/raw/main/xengine.jpg)
 
 # XEngine
 
@@ -24,7 +24,7 @@ Maximizes CPU and GPU clock speeds and disables thermal throttling with tuning k
 
 ## XMenu
 
-**XMenu™**, a XEngine™ modes changer with miscellaneous functions. By using it, you can change the current mode of XEngine™ and can apply few other tweaks which are also necessary to optimize device. To open XMenu™ in terminal, execute `su -c xmenu` in terminal (Termux is recommended). To know more about the miscellaneous functions, their is a help option in XMenu™ by which you can know what those functions actually do.
+**XMenu™**, a XEngine™ modes changer with miscellaneous functions. By using it, you can change the current mode of XEngine™ and can apply few other tweaks which are also necessary to optimize device. To open XMenu™ in terminal, execute `su -c xengine --menu` in terminal (Termux is recommended). To know more about the miscellaneous functions, their is a help option in XMenu™ by which you can know what those functions actually do.
 
 ## FAQ (Frequently Asked Questions)
 
